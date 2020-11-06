@@ -1,0 +1,34 @@
+Data binding merupakan proses membangun koneksi antarmuka aplikasi dengan business logic. Data biding library merupakan library yang berfungsi untuk mempersingkat coding tanpa menggunakan findviewbyid.
+Langkah" pembuatan data binding yaitu new project, enable data binding, update layout xml, reference binding di activity dan set ui di layout pakai data binding.
+1. Update layout xml yaitu menconvert layout ke databinding layout kemudian tambahkan tag databinding.
+2. Reference binding di activity yaitu update codingan fragment / activity biar membuat data binding.
+3.Set ui di layout pakai data binding yaitu mengeset nilai variabel di layout dari fragment atau activity.
+
+Alasan menggunakan data binding 
+1. meremove call ke findViewById, dengan mengunakan data binding akan menghilangkan conts computasi saat melakukan search byid
+
+Cara membuat data binding :
+1. Set build gradle pada module app tambahkan "buildFeatures {
+	dataBinding true
+}"
+2. Membuat layout dengan update layout, caranya dengan widget constraint layout convert data binding layout terus buat data dan variabel.
+3. Membuat main activity, reference dengan membuat generate class terus set variabel binding di layout.
+
+Data Binding
+1.
+
+One Way Data Binding
+1. Membuat variabel yang mengarah ke class yang berisi data binding.
+2. Pada main activity membuat object untuk medapatkan nilai dari class, dan mesetup binding untuk menampilkan edittext(toway)menampilkan di textview(oneway).
+class tersebut harus extends BaseObservable(memiliki dua beaviour)harus menambahkan @bindable untuk get toway yang akan di bindingkan. dan untuk to way ditambahkan notifyPropertyChanged.
+Dengan binding bisa set data binding di UI
+
+Two Way Data Binding Dengan Form
+1. Pada layout di tag data selain variabel terdapat import(buat class pembantu), setiap widget di binding.
+2. membuat class bindingUtil berisi method yang dibinding di UI berisi InverseMethod (get&set)
+
+View Model
+1. membuat data binding di layout.
+2. menambahkan function doPushup
+3. View model digunakan menapilkan view yang ada di main activity, semua perhitungan terjadi di model view dan di main activity hanya ada event saja. 
+sudah configuration change
